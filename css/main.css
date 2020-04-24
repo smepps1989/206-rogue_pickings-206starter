@@ -11,7 +11,7 @@ body {
 }
 
 .container{
-	max-width: 768px;
+	max-width: 767px;
 	margin: 0 auto;
 }
 
@@ -42,19 +42,16 @@ p {
     padding: 0 30px;
 }
 
-/*The widths are in a percentage!*/
 header {
-	/*height: 110px;*/
 	margin: 0 auto;
-	display: flex;
+    display: flex;
     justify-content: center;
     align-items: center;
-	flex-wrap: wrap;
-	width: 90%;
+    flex-flow: column wrap;
+    width: 90%;
 }
 
 header h1 {
-	/*float: left;*/
 	margin: 0;
 	padding: 38px 0;
 	border-bottom: 3px solid #77a466;
@@ -64,15 +61,11 @@ header h1 span {
 }
 
 header nav {
-	/*float: right;*/
 	padding: 46px 0;
 }
 header nav ul {
 	margin: 0;
 	padding: 0;
-	/*display: flex;
-	align-items: center;
-	flex-direction: column;*/
 	list-style: none;
 
 }
@@ -84,28 +77,27 @@ header nav ul li {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	/*display: inline;*/
 }
+
 header nav ul li a {
 	text-decoration: none;
 	color:#77a466;
 }
  
-/*The widths are in a percentage!*/
+
 .top-section,
 .bottom-section {
 	margin: 0 auto;
 	width: 90%;
 	display: flex;
 	flex-flow: column wrap;
-	align-items: center;
-	/*clear: both;*/
 }
 
 .main-image {
 	height: auto;
-	/*float: left;*/
+
 }
+
 .main-image img {
 	width: 100%;
 	border-bottom: 3px solid #77a466;
@@ -114,13 +106,12 @@ header nav ul li a {
 
 .main-title {
 	height: auto;
-	/*float: left;*/
 }
 .main-title h3 {
-	/*text-align: left;*/
 	padding: 5px 0;
 	color: #77a466;
 }
+
 .main-title p {
 	padding: 0;
 	font-size: 1em;
@@ -130,24 +121,12 @@ header nav ul li a {
 .section-one,
 .section-two,
 .section-three {
-	/*width: 33%;*/
-	height: auto;
-	/*float: left;*/
 	border-top: 1px solid #eee;
 	display: flex;
 	flex-direction: column;
-	align-items: center;
 }
 
-.section-one h4 {
-	padding: 10px 0;
-}
-
-/*.section-two {
-	border-left: 1px solid #eee;
-	border-right: 1px solid #eee;
-}*/
-
+.section-one h4,
 .section-two h4,
 .section-three h4 {
 	padding: 10px 30px;
@@ -173,7 +152,6 @@ header nav ul li a {
 	line-height: 24px;
 }
 
-/*The widths are in a percentage!*/
 footer {
 	height: 50px;
 	border-top: 3px solid #eee;
@@ -181,12 +159,59 @@ footer {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	/*clear: both;*/
-	/*text-align: center;*/
 }
+
 footer span {
 	font-family: 'Wisdom Script', cursive;
 	text-transform: lowercase;
 	color: #77a466;
 	font-size: 0.875em;
+}
+
+/* Tablet Style*/
+@media (min-width: 768px) {
+
+.bottom-section {
+    flex-flow: row wrap;
+}
+
+.section-one,
+.section-two,
+.section-three {
+    width: 33%;
+    flex-flow: column wrap;
+    border-left: 1px solid #eee;
+}
+ .section-three {
+	border-right: 1px solid #eee;
+ }
+footer {
+	width: 90%;
+}
+}
+/* Desktop Style*/
+@media (min-width: 1200px) {
+.container {
+	min-width: 1200px;
+}
+
+ header {
+	border-bottom: 3px solid #77a466;
+	flex-flow: row wrap;
+	justify-content: space-between;
+ }
+ header h1 {
+	 border-bottom: none;
+ }
+
+ header nav ul li {
+	text-transform: uppercase;
+    font-weight: 700;
+    font-size: 0.875em;
+    padding: 10px;
+    display: inline;
+ }
+ .top-section {
+	 padding-top: 30px;
+ }
 }
